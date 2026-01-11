@@ -12,7 +12,9 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 │   ├── plan.json     # Architecture planning (opus-4-5)
 │   └── sync-prompts.json  # Syncs prompts from Claude Code repo
 ├── docs/             # On-demand context (only loaded when needed)
-│   └── playwright.md # Playwright testing best practices
+│   ├── cloudscape.md # Cloudscape design system
+│   ├── code-review.md # Code review guide
+│   └── playwright.md # Playwright testing
 └── prompts/          # System prompts referenced by agents
     ├── default-prompt.md
     ├── explore-prompt.md
