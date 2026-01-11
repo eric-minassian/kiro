@@ -1,0 +1,58 @@
+{
+  "name": "plan",
+  "description": "Planning specialist for exploring codebases and designing implementation strategies in read-only mode",
+  "prompt": "file://../prompts/plan-prompt.md",
+  "model": "claude-sonnet-4",
+  "tools": [
+    "read",
+    "shell"
+  ],
+  "allowedTools": [
+    "read",
+    "shell"
+  ],
+  "toolsSettings": {
+    "shell": {
+      "allowedCommands": [
+        "ls",
+        "find",
+        "cat",
+        "head",
+        "tail",
+        "wc",
+        "git status",
+        "git log",
+        "git diff",
+        "git branch",
+        "git show",
+        "tree",
+        "file",
+        "stat",
+        "grep",
+        "rg"
+      ]
+    }
+  },
+  "resources": [
+    "file://README.md",
+    "file://CONTRIBUTING.md",
+    "file://package.json",
+    "file://tsconfig.json",
+    "file://Cargo.toml",
+    "file://pyproject.toml",
+    "file://go.mod",
+    "file://docs/**/*.md"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "git status --porcelain",
+        "timeout_ms": 5000
+      },
+      {
+        "command": "git branch --show-current",
+        "timeout_ms": 3000
+      }
+    ]
+  }
+}

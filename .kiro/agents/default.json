@@ -1,0 +1,63 @@
+{
+  "name": "default",
+  "description": "General-purpose software engineering assistant for coding tasks, bug fixes, refactoring, and more",
+  "prompt": "file://../prompts/default-prompt.md",
+  "model": "claude-sonnet-4",
+  "tools": [
+    "read",
+    "write",
+    "shell"
+  ],
+  "allowedTools": [
+    "read"
+  ],
+  "toolsSettings": {
+    "write": {
+      "allowedPaths": [
+        "src/**",
+        "lib/**",
+        "tests/**",
+        "test/**",
+        "spec/**",
+        "docs/**",
+        "scripts/**",
+        "*.md",
+        "*.json",
+        "*.yaml",
+        "*.yml",
+        "*.toml",
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx",
+        "*.py",
+        "*.go",
+        "*.rs",
+        "*.css",
+        "*.scss",
+        "*.html"
+      ]
+    }
+  },
+  "resources": [
+    "file://README.md",
+    "file://CONTRIBUTING.md",
+    "file://package.json",
+    "file://tsconfig.json",
+    "file://Cargo.toml",
+    "file://pyproject.toml",
+    "file://go.mod"
+  ],
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "git status --porcelain",
+        "timeout_ms": 5000
+      },
+      {
+        "command": "git branch --show-current",
+        "timeout_ms": 3000
+      }
+    ]
+  }
+}
