@@ -57,6 +57,7 @@ Reference docs are available in `.kiro/docs/`. Read these files when working on 
 
 - `.kiro/docs/playwright.md` - Read when writing, debugging, or reviewing Playwright tests
 - `.kiro/docs/code-review.md` - Read when reviewing code, PRs, or providing code feedback
+- `.kiro/docs/cloudscape.md` - Read when working with Cloudscape design system components
 
 Only read these files when actively working on the related topic. Do not load them preemptively.
 
