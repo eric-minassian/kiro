@@ -36,11 +36,34 @@ https://github.com/Piebald-AI/claude-code-system-prompts
    - Remove any conditional blocks (`${...?...:...}`) and keep the relevant content
    - Preserve the exact structure, wording, and formatting otherwise
 
-3. Write the translated prompts to the corresponding Kiro target files.
+3. **IMPORTANT: Preserve Kiro-specific sections in default-prompt.md**
 
-4. Show a diff summary of what changed.
+   The default prompt contains custom sections that are NOT from Claude Code. When updating, you MUST preserve these sections:
 
-5. Do NOT commit - let the user review first.
+   ```
+   # Subagents
+   [PRESERVE THIS ENTIRE SECTION]
+
+   # Context docs
+   [PRESERVE THIS ENTIRE SECTION]
+   ```
+
+   Insert the translated Claude Code content, then append these Kiro-specific sections before "# Tool usage policy".
+
+4. Write the translated prompts to the corresponding Kiro target files.
+
+5. Show a diff summary of what changed.
+
+6. Do NOT commit - let the user review first.
+
+## Kiro-Specific Files (Do Not Sync)
+
+These files are Kiro-only and should NOT be overwritten by sync:
+
+| File | Purpose |
+|------|---------|
+| `.kiro/docs/playwright.md` | Playwright testing best practices (loaded on-demand) |
+| `.kiro/agents/*.json` | Agent configurations with Kiro-specific settings |
 
 ## Tool Name Mapping Reference
 
