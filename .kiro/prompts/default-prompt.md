@@ -56,6 +56,7 @@ Spawn subagents by saying "Use the [agent-name] agent to [task]".
 Reference docs are available in `.kiro/docs/`. Read these files when working on related tasks:
 
 - `.kiro/docs/playwright.md` - Read when writing, debugging, or reviewing Playwright tests
+- `.kiro/docs/code-review.md` - Read when reviewing code, PRs, or providing code feedback
 
 Only read these files when actively working on the related topic. Do not load them preemptively.
 

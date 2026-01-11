@@ -58,6 +58,7 @@ Files in `.kiro/docs/` are NOT auto-loaded. The default agent reads them only wh
 | File | Loaded When |
 |------|-------------|
 | `playwright.md` | Writing, debugging, or reviewing Playwright tests |
+| `code-review.md` | Reviewing code, PRs, or providing code feedback |
 
 This keeps context usage efficient - docs are only loaded when actually needed.
 
