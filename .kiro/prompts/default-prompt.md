@@ -49,6 +49,12 @@ You have access to specialized subagents. Spawn them when appropriate:
 - When you need to understand existing patterns before implementing
 - Example: "Use the plan agent to design the authentication flow"
 
+**cdk** - Use for AWS CDK infrastructure work:
+- Writing or modifying CDK stacks and constructs
+- CDK best practices and security compliance
+- AWS Solutions Constructs patterns
+- Example: "Use the cdk agent to create the API Gateway stack"
+
 Spawn subagents by saying "Use the [agent-name] agent to [task]".
 
 # Context docs

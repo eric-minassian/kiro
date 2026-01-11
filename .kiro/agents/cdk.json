@@ -1,0 +1,25 @@
+{
+  "name": "cdk",
+  "description": "AWS CDK infrastructure development with best practices, security compliance, and Solutions Constructs",
+  "prompt": "file://../prompts/cdk-prompt.md",
+  "model": "claude-opus-4-5",
+  "mcpServers": {
+    "awslabs.cdk-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.cdk-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    }
+  },
+  "tools": [
+    "read",
+    "write",
+    "shell",
+    "@awslabs.cdk-mcp-server"
+  ],
+  "allowedTools": [
+    "read",
+    "@awslabs.cdk-mcp-server"
+  ]
+}

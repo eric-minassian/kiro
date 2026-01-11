@@ -7,6 +7,7 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 ```
 .kiro/
 ├── agents/           # Agent configurations (JSON)
+│   ├── cdk.json      # AWS CDK with MCP tools (opus-4-5)
 │   ├── default.json  # Main coding agent (opus-4-5)
 │   ├── explore.json  # Fast codebase search (haiku-4-5)
 │   ├── plan.json     # Architecture planning (opus-4-5)
@@ -16,6 +17,7 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 │   ├── code-review.md # Code review guide
 │   └── playwright.md # Playwright testing
 └── prompts/          # System prompts referenced by agents
+    ├── cdk-prompt.md
     ├── default-prompt.md
     ├── explore-prompt.md
     ├── plan-prompt.md
@@ -29,6 +31,7 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 | `default` | opus-4-5 | General coding tasks, bug fixes, refactoring |
 | `explore` | haiku-4-5 | Fast, read-only codebase exploration |
 | `plan` | opus-4-5 | Read-only architecture and implementation planning |
+| `cdk` | opus-4-5 | AWS CDK with MCP tools (CDK Nag, Solutions Constructs) |
 | `sync-prompts` | haiku-4-5 | Updates prompts from Claude Code repo |
 
 ### Usage
@@ -59,9 +62,9 @@ Files in `.kiro/docs/` are NOT auto-loaded. The default agent reads them only wh
 
 | File | Loaded When |
 |------|-------------|
-| `playwright.md` | Writing, debugging, or reviewing Playwright tests |
-| `code-review.md` | Reviewing code, PRs, or providing code feedback |
 | `cloudscape.md` | Working with Cloudscape design system components |
+| `code-review.md` | Reviewing code, PRs, or providing code feedback |
+| `playwright.md` | Writing, debugging, or reviewing Playwright tests |
 
 This keeps context usage efficient - docs are only loaded when actually needed.
 
