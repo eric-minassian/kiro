@@ -8,20 +8,22 @@ https://github.com/Piebald-AI/claude-code-system-prompts
 
 ## Files to Sync
 
-| Claude Code Source | Kiro Target |
-|-------------------|-------------|
-| `system-prompts/agent-prompt-explore.md` | `.kiro/prompts/explore-prompt.md` |
-| `system-prompts/agent-prompt-plan-mode-enhanced.md` | `.kiro/prompts/plan-prompt.md` |
+| Claude Code Source                                   | Kiro Target                       |
+| ---------------------------------------------------- | --------------------------------- |
+| `system-prompts/agent-prompt-explore.md`             | `.kiro/prompts/explore-prompt.md` |
+| `system-prompts/agent-prompt-plan-mode-enhanced.md`  | `.kiro/prompts/plan-prompt.md`    |
 | `system-prompts/system-prompt-main-system-prompt.md` | `.kiro/prompts/default-prompt.md` |
 
 ## Instructions
 
 1. Fetch each Claude Code prompt from the raw GitHub URLs:
+
    - https://raw.githubusercontent.com/Piebald-AI/claude-code-system-prompts/main/system-prompts/agent-prompt-explore.md
    - https://raw.githubusercontent.com/Piebald-AI/claude-code-system-prompts/main/system-prompts/agent-prompt-plan-mode-enhanced.md
    - https://raw.githubusercontent.com/Piebald-AI/claude-code-system-prompts/main/system-prompts/system-prompt-main-system-prompt.md
 
 2. For each prompt, create a faithful translation:
+
    - Remove the YAML frontmatter (the `<!-- ... -->` block at the top)
    - Replace template variables with Kiro equivalents:
      - `${GLOB_TOOL_NAME}` → `glob`
@@ -60,20 +62,20 @@ https://github.com/Piebald-AI/claude-code-system-prompts
 
 These files are Kiro-only and should NOT be overwritten by sync:
 
-| File | Purpose |
-|------|---------|
+| File                       | Purpose                                              |
+| -------------------------- | ---------------------------------------------------- |
 | `.kiro/docs/playwright.md` | Playwright testing best practices (loaded on-demand) |
-| `.kiro/agents/*.json` | Agent configurations with Kiro-specific settings |
+| `.kiro/agents/*.json`      | Agent configurations with Kiro-specific settings     |
 
 ## Tool Name Mapping Reference
 
-| Claude Code | Kiro CLI |
-|-------------|----------|
-| Read | read |
-| Write | write |
-| Edit | edit |
-| Bash | shell |
-| Glob | glob |
-| Grep | grep |
-| Task | (subagents) |
-| TodoWrite | (task tracking) |
+| Claude Code | Kiro CLI        |
+| ----------- | --------------- |
+| Read        | read            |
+| Write       | write           |
+| Edit        | edit            |
+| Bash        | shell           |
+| Glob        | glob            |
+| Grep        | grep            |
+| Task        | (subagents)     |
+| TodoWrite   | (task tracking) |

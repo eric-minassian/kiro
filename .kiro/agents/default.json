@@ -3,13 +3,17 @@
   "description": "General-purpose software engineering assistant for coding tasks, bug fixes, refactoring, and more",
   "prompt": "file://../prompts/default-prompt.md",
   "model": "claude-opus-4.5",
-  "tools": [
-    "read",
-    "write",
-    "shell"
-  ],
+  "tools": ["@builtin"],
   "allowedTools": [
-    "read"
+    "read",
+    "glob",
+    "grep",
+    "web_search",
+    "web_fetch",
+    "thinking",
+    "todo",
+    "knowledge",
+    "use_subagent"
   ],
   "toolsSettings": {
     "write": {

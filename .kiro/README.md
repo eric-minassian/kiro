@@ -26,13 +26,13 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 
 ## Agents
 
-| Agent | Model | Purpose |
-|-------|-------|---------|
-| `default` | opus-4.5 | General coding tasks, bug fixes, refactoring |
-| `explore` | haiku-4.5 | Fast, read-only codebase exploration |
-| `plan` | opus-4.5 | Read-only architecture and implementation planning |
-| `cdk` | opus-4.5 | AWS CDK with MCP tools (CDK Nag, Solutions Constructs) |
-| `sync-prompts` | haiku-4.5 | Updates prompts from Claude Code repo |
+| Agent          | Model     | Purpose                                                |
+| -------------- | --------- | ------------------------------------------------------ |
+| `default`      | opus-4.5  | General coding tasks, bug fixes, refactoring           |
+| `explore`      | haiku-4.5 | Fast, read-only codebase exploration                   |
+| `plan`         | opus-4.5  | Read-only architecture and implementation planning     |
+| `cdk`          | opus-4.5  | AWS CDK with MCP tools (CDK Nag, Solutions Constructs) |
+| `sync-prompts` | haiku-4.5 | Updates prompts from Claude Code repo                  |
 
 ### Usage
 
@@ -60,11 +60,11 @@ Subagents are spawned by the default agent saying "Use the [agent] agent to [tas
 
 Files in `.kiro/docs/` are NOT auto-loaded. The default agent reads them only when working on related tasks:
 
-| File | Loaded When |
-|------|-------------|
-| `cloudscape.md` | Working with Cloudscape design system components |
-| `code-review.md` | Reviewing code, PRs, or providing code feedback |
-| `playwright.md` | Writing, debugging, or reviewing Playwright tests |
+| File             | Loaded When                                       |
+| ---------------- | ------------------------------------------------- |
+| `cloudscape.md`  | Working with Cloudscape design system components  |
+| `code-review.md` | Reviewing code, PRs, or providing code feedback   |
+| `playwright.md`  | Writing, debugging, or reviewing Playwright tests |
 
 This keeps context usage efficient - docs are only loaded when actually needed.
 
@@ -83,10 +83,10 @@ For always-on context, use `.kiro/steering/` instead:
 
 Prompts are translated from [Claude Code system prompts](https://github.com/Piebald-AI/claude-code-system-prompts):
 
-| Claude Code | Kiro |
-|-------------|------|
-| `agent-prompt-explore.md` | `explore-prompt.md` |
-| `agent-prompt-plan-mode-enhanced.md` | `plan-prompt.md` |
+| Claude Code                           | Kiro                |
+| ------------------------------------- | ------------------- |
+| `agent-prompt-explore.md`             | `explore-prompt.md` |
+| `agent-prompt-plan-mode-enhanced.md`  | `plan-prompt.md`    |
 | `system-prompt-main-system-prompt.md` | `default-prompt.md` |
 
 ### Syncing Updates
@@ -103,14 +103,14 @@ This fetches the latest prompts, translates them for Kiro, and preserves Kiro-sp
 
 ### Tool Name Mapping
 
-| Claude Code | Kiro |
-|-------------|------|
-| Bash | shell |
-| Read | read |
-| Write | write |
-| Edit | edit |
-| Glob | glob |
-| Grep | grep |
+| Claude Code | Kiro  |
+| ----------- | ----- |
+| Bash        | shell |
+| Read        | read  |
+| Write       | write |
+| Edit        | edit  |
+| Glob        | glob  |
+| Grep        | grep  |
 
 ### Kiro-Specific Extensions
 

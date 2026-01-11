@@ -16,10 +16,20 @@
     "read",
     "write",
     "shell",
+    "grep",
+    "glob",
+    "thinking",
+    "web_fetch",
+    "web_search",
     "@awslabs.cdk-mcp-server"
   ],
   "allowedTools": [
     "read",
+    "grep",
+    "glob",
+    "thinking",
+    "web_fetch",
+    "web_search",
     "@awslabs.cdk-mcp-server"
   ]
 }

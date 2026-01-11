@@ -3,14 +3,8 @@
   "description": "Fast, read-only codebase exploration specialist for finding files, searching code, and answering questions about codebases",
   "prompt": "file://../prompts/explore-prompt.md",
   "model": "claude-haiku-4.5",
-  "tools": [
-    "read",
-    "shell"
-  ],
-  "allowedTools": [
-    "read",
-    "shell"
-  ],
+  "tools": ["read", "shell", "glob", "grep"],
+  "allowedTools": ["read", "shell", "glob", "grep"],
   "toolsSettings": {
     "shell": {
       "allowedCommands": [
