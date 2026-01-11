@@ -2,7 +2,7 @@
   "name": "default",
   "description": "General-purpose software engineering assistant for coding tasks, bug fixes, refactoring, and more",
   "prompt": "file://../prompts/default-prompt.md",
-  "model": "claude-sonnet-4",
+  "model": "claude-sonnet-4-5",
   "tools": [
     "read",
     "write",
