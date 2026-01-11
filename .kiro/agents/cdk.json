@@ -2,7 +2,7 @@
   "name": "cdk",
   "description": "AWS CDK infrastructure development with best practices, security compliance, and Solutions Constructs",
   "prompt": "file://../prompts/cdk-prompt.md",
-  "model": "claude-opus-4-5",
+  "model": "claude-opus-4.5",
   "mcpServers": {
     "awslabs.cdk-mcp-server": {
       "command": "uvx",

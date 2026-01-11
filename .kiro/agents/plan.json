@@ -2,7 +2,7 @@
   "name": "plan",
   "description": "Planning specialist for exploring codebases and designing implementation strategies in read-only mode",
   "prompt": "file://../prompts/plan-prompt.md",
-  "model": "claude-opus-4-5",
+  "model": "claude-opus-4.5",
   "tools": [
     "read",
     "shell"

@@ -2,7 +2,7 @@
   "name": "sync-prompts",
   "description": "Syncs Kiro prompts from the latest Claude Code system prompts repository",
   "prompt": "file://../prompts/sync-prompts.md",
-  "model": "claude-haiku-4-5",
+  "model": "claude-haiku-4.5",
   "tools": [
     "read",
     "write",

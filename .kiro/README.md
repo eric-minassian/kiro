@@ -7,10 +7,10 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 ```
 .kiro/
 ├── agents/           # Agent configurations (JSON)
-│   ├── cdk.json      # AWS CDK with MCP tools (opus-4-5)
-│   ├── default.json  # Main coding agent (opus-4-5)
-│   ├── explore.json  # Fast codebase search (haiku-4-5)
-│   ├── plan.json     # Architecture planning (opus-4-5)
+│   ├── cdk.json      # AWS CDK with MCP tools (opus-4.5)
+│   ├── default.json  # Main coding agent (opus-4.5)
+│   ├── explore.json  # Fast codebase search (haiku-4.5)
+│   ├── plan.json     # Architecture planning (opus-4.5)
 │   └── sync-prompts.json  # Syncs prompts from Claude Code repo
 ├── docs/             # On-demand context (only loaded when needed)
 │   ├── cloudscape.md # Cloudscape design system
@@ -28,11 +28,11 @@ Custom agent configurations for Kiro CLI, mirroring Claude Code's system prompts
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| `default` | opus-4-5 | General coding tasks, bug fixes, refactoring |
-| `explore` | haiku-4-5 | Fast, read-only codebase exploration |
-| `plan` | opus-4-5 | Read-only architecture and implementation planning |
-| `cdk` | opus-4-5 | AWS CDK with MCP tools (CDK Nag, Solutions Constructs) |
-| `sync-prompts` | haiku-4-5 | Updates prompts from Claude Code repo |
+| `default` | opus-4.5 | General coding tasks, bug fixes, refactoring |
+| `explore` | haiku-4.5 | Fast, read-only codebase exploration |
+| `plan` | opus-4.5 | Read-only architecture and implementation planning |
+| `cdk` | opus-4.5 | AWS CDK with MCP tools (CDK Nag, Solutions Constructs) |
+| `sync-prompts` | haiku-4.5 | Updates prompts from Claude Code repo |
 
 ### Usage
 
