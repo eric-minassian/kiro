@@ -1,0 +1,20 @@
+{
+  "chat.defaultAgent": "default",
+  "chat.enableNotifications": true,
+  "chat.enableThinking": true,
+  "chat.enableTodoList": true,
+  "chat.enableTangentMode": true,
+  "chat.enableCheckpoint": false,
+  "chat.enableDelegate": false,
+  "chat.enableContextUsageIndicator": true,
+  "chat.enableKnowledge": true,
+  "chat.enablePromptHints": true,
+  "chat.enableHistoryHints": true,
+  "chat.greeting.enabled": false,
+  "chat.disableMarkdownRendering": false,
+  "chat.disableAutoCompaction": false,
+  "chat.editMode": true,
+  "compaction.excludeMessages": 2,
+  "compaction.excludeContextWindowPercent": 2,
+  "mcp.loadedBefore": true
+}
